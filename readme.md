@@ -1,6 +1,6 @@
 ## Form Validations in Express
 
-**This repo contains my solution to the following exercise:***
+***This repo contains my solution to the following exercise:***
 
 ### Setup
 
