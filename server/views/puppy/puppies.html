@@ -1,0 +1,30 @@
+{% extends '../layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+    <h1>{{ Title }}</h1>
+  </div>
+
+  <div>
+    <p>{{success}}</p>
+  </div>
+
+<table class="table table-striped">
+  <tr>
+    <td><strong>Name</strong></td>
+    <td><strong>ID</strong></td>
+  </tr>
+
+  {% for puppy in puppies %}
+  <tr>
+      <td>{{puppy.name}}</td>
+      <td>{{puppy.id}}</td>
+  </tr>
+  {% endfor %}
+
+</table>
+
+{% endblock %}
