@@ -8,7 +8,7 @@
     <h1>{{ Title }}</h1>
   </div>
 
-  <div>
+  <div class="alert alert-success" role="alert">
     <p>{{success}}</p>
   </div>
 
@@ -19,12 +19,14 @@
   </tr>
 
   {% for puppy in puppies %}
-  <tr>
-      <td>{{puppy.name}}</td>
-      <td>{{puppy.id}}</td>
-  </tr>
+    <tr>
+        <td>{{puppy.name}}</td>
+        <td>{{puppy.id}}</td>
+    </tr>
   {% endfor %}
 
 </table>
+
+<a href="/puppy/new"><button type="submit" value="addAnotherPuppy" class="btn btn-default">Add Another Puppy!</button></a>
 
 {% endblock %}

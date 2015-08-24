@@ -7,6 +7,15 @@
   <div class="container">
     <h1>{{ Title }}</h1>
   </div>
+
+  {% if errors %}
+    <div class="alert alert-danger" role="alert">
+    {% for error in errors %}
+      <p>{{error}}</p>
+    {% endfor %}
+    </div>
+  {% endif %}
+
 <!-- action is post route want to end up at -->
   <form method="post" action="/puppy/new" class="form-horizontal">
     <div class="form-group">
