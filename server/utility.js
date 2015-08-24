@@ -10,7 +10,7 @@ function puppyValidate(puppyName, puppyId) {
   if(puppyIdTrimmed === '') {
     errorArray.push('ID cannot be blank.');
   }
-  else if (puppyIdTrimmed.length < 3) {
+  if (puppyIdTrimmed.length < 3) {
     errorArray.push('ID must be at least 3 characters long.');
   }
   return errorArray;
@@ -24,7 +24,7 @@ function personValidate(firstName, hobby) {
   if(firstNameTrimmed === '') {
     errorArray.push("Name cannot be blank.");
   }
-  else if(hobbyTrimmed === '') {
+  if(hobbyTrimmed === '') {
     errorArray.push('Hobby cannot be blank.');
   }
   return errorArray;

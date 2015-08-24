@@ -1,0 +1,40 @@
+{% extends '../layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+    <h1>{{ Title }}</h1>
+  </div>
+
+  {% if errors %}
+    <div class="alert alert-danger" role="alert">
+    {% for error in errors %}
+      <p>{{error}}</p>
+    {% endfor %}
+    </div>
+  {% endif %}
+
+<!-- action is post route want to end up at -->
+  <form method="post" action="/person/new" class="form-horizontal">
+    <div class="form-group">
+      <label for="inputFirstName" class="col-sm-2 control-label">First Name</label>
+      <div class="col-sm-6">
+        <input type="text" name="firstName" class="form-control" placeholder="Enter the person's first name...">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputHobby" class="col-sm-2 control-label">Hobby</label>
+      <div class="col-sm-6">
+        <input type="text" name="hobby" class="form-control" placeholder="Enter person's hobby...">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-6">
+        <a href="/person/people"><button type="submit" value="createPerson" class="btn btn-default">Create Person!</button></a>
+      </div>
+    </div>
+  </form>
+
+{% endblock %}
