@@ -1,4 +1,4 @@
-
+//puppy validation logic
 function puppyValidate(puppyName, puppyId) {
   var errorArray = [];
   var puppyNameTrimmed = puppyName.trim(); //trims whitespace
@@ -16,9 +16,10 @@ function puppyValidate(puppyName, puppyId) {
   return errorArray;
 }
 
+//person validation logic
 function personValidate(firstName, hobby) {
   var errorArray = [];
-  var firstNameTrimmed = firstName.trim(); //trims whitespace
+  var firstNameTrimmed = firstName.trim();
   var hobbyTrimmed = hobby.trim();
 
   if(firstNameTrimmed === '') {
