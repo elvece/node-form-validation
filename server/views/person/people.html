@@ -1,7 +1,5 @@
 {% extends '../layout.html' %}
-
 {% block title %}{% endblock %}
-
 {% block content %}
 
   <!-- title -->
@@ -26,10 +24,10 @@
         <td><strong>Hobby</strong></td>
       </tr>
       {% for person in people %}
-        <tr>
-            <td>{{person.name}}</td>
-            <td>{{person.hobby}}</td>
-        </tr>
+      <tr>
+        <td>{{person.name}}</td>
+        <td>{{person.hobby}}</td>
+      </tr>
       {% endfor %}
     </table>
 
