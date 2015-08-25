@@ -4,30 +4,40 @@
 
 {% block content %}
 
-  <div class="container">
-    <h1>{{ Title }}</h1>
+  <!-- title -->
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6 text-center">
+      <h1>{{ Title }}</h1><br>
+    </div>
   </div>
 
-  <div class="alert alert-success" role="alert">
-    <p>{{success}}</p>
+  <!-- success alert -->
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6 alert alert-success" role="alert">
+      <p>{{success}}</p>
+    </div>
   </div>
 
-<table class="table table-striped">
-  <tr>
-    <td><strong>First Name</strong></td>
-    <td><strong>Hobby</strong></td>
-  </tr>
+  <!-- display table -->
+  <div class="col-md-offset-1 col-md-10">
+    <table class="table table-striped">
+      <tr>
+        <td><strong>First Name</strong></td>
+        <td><strong>Hobby</strong></td>
+      </tr>
+      {% for person in people %}
+        <tr>
+            <td>{{person.name}}</td>
+            <td>{{person.hobby}}</td>
+        </tr>
+      {% endfor %}
+    </table>
 
-  {% for person in people %}
-    <tr>
-        <td>{{person.name}}</td>
-        <td>{{person.hobby}}</td>
-    </tr>
-  {% endfor %}
-
-</table>
-
-<a href="/person/new"><button type="submit" value="addAnotherPerson" class="btn btn-default">Add Another Person!</button></a>
-<a href="/"><button type="submit" value="home" class="btn btn-default">Home</button></a>
+    <!-- additional buttons -->
+    <div class="text-center">
+      <a href="/person/new"><button type="submit" value="addAnotherPerson" class="btn btn-default">Add Another Person!</button></a>
+      <a href="/"><button type="submit" value="home" class="btn btn-default">Home</button></a>
+    </div>
+  </div>
 
 {% endblock %}

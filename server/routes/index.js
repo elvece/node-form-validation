@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var utility = require("../utility.js");
+var utility = require("../logic/utility.js");
 var puppies = [];
 var people = [];
 
@@ -65,7 +65,7 @@ router.get('/person/new', function(req, res, next){
 
 router.get('/person/people', function(req, res, next){
   res.render('person/people', {
-    Title: 'All the Puppies',
+    Title: 'All the People',
     people: people,
     success: 'The person was saved successfully.'
   });
