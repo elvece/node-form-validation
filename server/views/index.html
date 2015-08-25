@@ -4,14 +4,23 @@
 
 {% block content %}
 
-  <div class="container">
-    <h1>{{ title }}</h1><br>
-    <p>Welcome to {{ title }}</p>
-    <a href="/puppy/new"><button type="submit" value="addPuppy" class="btn btn-default">Add a Puppy!</button></a>
-    <a href="/person/new"><button type="submit" value="addPerson" class="btn btn-default">Add a Person!</button></a>
+  <div class="container-fluid">
+    <!-- title info -->
+    <div class="row">
+      <div class="col-md-offset-3 col-md-6 text-center">
+        <h1>{{ title }}</h1>
+        <p>Welcome to {{ title }}!</p><br>
+      </div>
+      <!-- add buttons -->
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6 text-center">
+          <a href="/puppy/new"><button type="submit" value="addPuppy" class="btn btn-default">Add a Puppy!</button></a><br><br>
+          <p>OR</p><br>
+          <a href="/person/new"><button type="submit" value="addPerson" class="btn btn-default">Add a Person!</button></a>
+        </div>
+      </div>
+
+    </div>
   </div>
-
-
-
 
 {% endblock %}
